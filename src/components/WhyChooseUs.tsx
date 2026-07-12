@@ -69,6 +69,12 @@ export function WhyChooseUs() {
 
         </div>
       </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80"
+        alt="Designers collaborating in the studio"
+        className="-mx-6 mt-20 w-full max-w-none aspect-[16/7] object-cover lg:-mx-12"
+      />
     </section>
   );
 }

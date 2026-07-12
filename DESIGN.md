@@ -13,7 +13,29 @@ Eindhoven Design District reads as editorial brutalism on white paper: a near-mo
 | Paper White | `#ffffff` | `--color-paper-white` | Primary page canvas, card surfaces, button fills, and inverted text on dark blocks. The ground against which everything else is set |
 | Newsprint Gray | `#e8e8e8` | `--color-newsprint-gray` | Section background for content bands (article grids, footer areas) — creates quiet tonal shifts between white sections without introducing a second hue |
 | Pewter | `#bfbfbf` | `--color-pewter` | Muted helper text, list dividers, secondary link borders — used sparingly where information is deprioritized but still present |
-| Signal Red | `#ff0000` | `--color-signal-red` | Red outline accent for tags, dividers, and focused UI edges. |
+| Signal Red | `#ff0000` | `--color-signal-red` | Red outline accent for tags, dividers, and focused UI edges. Preserved editorial-label role — the expanded accents below are additive and never replace it. |
+
+### Expanded Accent Palette (client-approved)
+
+The base system was historically restricted to a single red accent. Per client direction the site is now allowed a broader, curated warm palette that carries real visual weight across backgrounds, buttons, and labels. The set is a coherent family (terracotta / sand / burnt-orange / brick / clay) sharing saturation and brightness so the site still feels designed rather than decorated. Structural ink (body text, hairline borders, nav logo) stays black/white for legibility.
+
+| Name | Value | Token | Role |
+|------|-------|-------|------|
+| Terracotta | `#D9531E` | `--color-accent-1` | Primary accent — full-saturation highlight section backgrounds and dominant emphasis blocks; carries black text at AA contrast. |
+| Soft Sand | `#F4D9C4` | `--color-accent-2` | Quiet warm band background for content sections; a tonal shift that reads as accent without breaking the editorial calm. |
+| Burnt Orange | `#C2410C` | `--color-accent-3` | Secondary accent for pill CTAs (white text) and editorial tags/labels; the workhorse action color of the expanded palette. |
+| Deep Brick | `#A23A2C` | `--color-accent-4` | Darkest accent for tags, dividers, and filled CTAs (white text); provides weight and AA contrast on light surfaces. |
+| Clay Blush | `#E9B7A0` | `--color-accent-5` | Warm light band background and alt-surface tone; lets accent color carry weight while keeping black copy at AA contrast. |
+
+### Brand Panel Accents (Eindhoven primaries)
+
+Beyond the warm action palette, the site also carries the three Eindhoven brand primaries — sampled from the reference site's flat left panels. These are used as full-bleed section backgrounds and as the signature **left-panel** detail (a vertical color rail beside section content). Each is chosen so its text stays AA-contrast: pink is light (black text), red and blue are deep enough for white text.
+
+| Name | Value | Token | Role |
+|------|-------|-------|------|
+| Blush Pink | `#DCA8CB` | `--color-accent-6` | Brand primary — light editorial band / left-panel background; carries black text at AA. |
+| Brand Red | `#E40000` | `--color-accent-7` | Brand primary red — mid band / left-panel background; carries white text at AA. Distinct from `--color-signal-red`; surface/panel use only, never a text label. |
+| Cobalt Blue | `#293EEF` | `--color-accent-8` | Brand primary blue — deep band / left-panel background; carries white text at AA, the darkest of the brand primaries. |
 
 ## Tokens — Typography
 
@@ -136,7 +158,7 @@ No visible line or ornament. Sections are separated by vertical space (80px+) an
 ### Do
 - Use HelveticaNow weight 400 for all display-size text above 50px — the lighter weight at extreme scale is the system's signature tension
 - Set border-radius to 500px on every button, tag, and language selector — the pill shape is non-negotiable
-- Maintain the black/white/#e8e8e8 trichromatic discipline — resist adding accent colors to UI chrome
+- Maintain the black/white/#e8e8e8 base discipline for structural ink (body text, hairline borders, nav logo), while the curated accent palette (accent-1…accent-5) carries color across section backgrounds, CTAs, and labels
 - Use #ff0000 only for editorial category labels in content areas, never for buttons, links, or structural elements
 - Set letter-spacing to -0.05em at 150px+ display sizes and progressively loosen toward +0.015em at 14px caption
 - Alternate section backgrounds between #ffffff and #e8e8e8 to create rhythm without ornament
@@ -145,7 +167,7 @@ No visible line or ornament. Sections are separated by vertical space (80px+) an
 ### Don't
 - Don't use weight 600 for display headlines above 50px — the system whispers at scale, it doesn't shout
 - Don't add drop shadows, gradients, or glass effects to any component — the system is flat by conviction
-- Don't introduce a second action color — buttons are always black-outline-on-white or solid-black-on-white
+- Don't introduce arbitrary or clashing colors — the only sanctioned colors are accent-1…accent-5 (warm action palette) and accent-6…accent-8 (Eindhoven brand primaries: pink / red / blue), used for backgrounds, left panels, CTAs, and tags/labels only
 - Don't use border-radius values other than 0px (rectangular) or 500px (pill) — no 4px, 8px, or 16px rounding
 - Don't set line-height above 1.0 for display text — the compressed stacking of oversized words is the visual identity
 - Don't separate photographs from the typographic composition with frames, whitespace buffers, or containers
@@ -177,8 +199,10 @@ Full-bleed page with no outer frame. Content sections max at ~1200px but photogr
 - background: #ffffff
 - secondary surface: #e8e8e8
 - border: #000000 (hairline) or #bfbfbf (muted)
-- accent: #ff0000 (editorial category labels only)
-- primary action: no distinct CTA color
+- accent: #ff0000 (editorial category labels only — preserved)
+- expanded accents: #D9531E (accent-1), #F4D9C4 (accent-2), #C2410C (accent-3), #A23A2C (accent-4), #E9B7A0 (accent-5) — curated warm palette for section backgrounds, CTAs, and tags/labels
+- brand panel accents: #DCA8CB (accent-6, pink), #E40000 (accent-7, red), #293EEF (accent-8, blue) — Eindhoven primaries for section bands and the left-panel detail (pink = black text; red & blue = white text)
+- primary action: accent-3 (#C2410C) filled pill with white text, or accent-3 outline on white
 
 ## 3-5 Example Component Prompts
 1. **Display Hero Headline**: Create an oversized headline reading 'Eindhoven' at 150px, HelveticaNow weight 400, #000000, letter-spacing -7.5px, line-height 0.93. Position it top-left of a white canvas. Add a second word 'Design' rotated 90° to the right of the first, same size and weight.

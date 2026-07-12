@@ -12,6 +12,16 @@
   --color-pewter: #bfbfbf;
   --color-signal-red: #ff0000;
 
+  --color-accent-1: #D9531E;
+  --color-accent-2: #F4D9C4;
+  --color-accent-3: #C2410C;
+  --color-accent-4: #A23A2C;
+  --color-accent-5: #E9B7A0;
+
+  --color-accent-6: #DCA8CB;
+  --color-accent-7: #E40000;
+  --color-accent-8: #293EEF;
+
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   --text-caption: 14px;

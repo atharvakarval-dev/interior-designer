@@ -81,6 +81,18 @@ export function Footer() {
                   Maharashtra 411014
                 </span>
               </li>
+              <li className="flex items-start gap-4 text-[16px] text-black">
+                <a href="tel:+918459330334" className="transition-colors hover:text-[#ff0000]">
+                  +91 84593 30334
+                </a>
+              </li>
+              <li className="flex items-start gap-4 text-[16px] text-black">
+                <span>
+                  Nanded Gaon, Near Nanded City,
+                  <br />
+                  Sinhagad Road, Pune
+                </span>
+              </li>
             </ul>
           </div>
         </div>

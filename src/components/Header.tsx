@@ -36,7 +36,7 @@ export function Header() {
           </button>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-full border border-black px-5 py-4 text-[16px] font-normal text-black transition-colors hover:bg-black hover:text-white"
+            className="inline-flex items-center justify-center rounded-full border border-accent-3 bg-accent-3 px-5 py-4 text-[16px] font-normal text-white transition-colors hover:bg-accent-4 hover:border-accent-4"
           >
             Get Free Consultation
           </a>
@@ -76,7 +76,7 @@ export function Header() {
                 <SheetClose asChild>
                   <a
                     href="#contact"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-black py-6 text-[16px] font-normal text-white transition-colors hover:bg-[#ff0000]"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-accent-3 py-6 text-[16px] font-normal text-white transition-colors hover:bg-accent-4"
                   >
                     Get Free Consultation
                   </a>

@@ -53,7 +53,7 @@ export function Hero() {
               <FadeUp delay={0.22}>
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center rounded-full border border-black bg-white px-4 py-2 text-[14px] font-normal text-black transition-colors hover:bg-black hover:text-white sm:px-[18px] sm:py-[10px] sm:text-[16px]"
+                  className="inline-flex items-center justify-center rounded-full border border-accent-3 bg-accent-3 px-4 py-2 text-[14px] font-normal text-white transition-colors hover:bg-accent-4 hover:border-accent-4 sm:px-[18px] sm:py-[10px] sm:text-[16px]"
                 >
                   Book a consultation
                 </a>
@@ -61,7 +61,7 @@ export function Hero() {
               <FadeUp delay={0.3}>
                 <a
                   href="#projects"
-                  className="inline-flex items-center justify-center rounded-full border border-black bg-white px-4 py-2 text-[14px] font-normal text-black transition-colors hover:bg-black hover:text-white sm:px-[18px] sm:py-[10px] sm:text-[16px]"
+                  className="inline-flex items-center justify-center rounded-full border border-accent-3 px-4 py-2 text-[14px] font-normal text-accent-3 transition-colors hover:bg-accent-3 hover:text-white sm:px-[18px] sm:py-[10px] sm:text-[16px]"
                 >
                   View projects
                 </a>
