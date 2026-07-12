@@ -1,108 +1,161 @@
-import { Instagram, Facebook, Youtube } from 'lucide-react';
+import React from 'react';
+import { FadeUp } from './FadeUp';
+import { ArrowUpRight } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer id="contact" className="w-full bg-[#e8e8e8] px-6 pb-12 pt-24 text-black lg:px-12">
-      <div className="container mx-auto max-w-[1200px]">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          <div className="flex flex-col gap-6">
-            <h2 className="text-[23px] font-normal tracking-[-0.39px] text-black">
-              Divine Space
+    <footer 
+      id="contact" 
+      className="relative w-full bg-[var(--color-accent-5)] text-[var(--color-charcoal-ink)] font-[family-name:var(--font-helveticanow)] pt-[100px] lg:pt-[150px] pb-[40px] overflow-hidden"
+    >
+      {/* Brand Editorial Rail (Terracotta) - Strict System Requirement */}
+      <div 
+        className="absolute inset-y-0 left-0 z-10 w-[8px] bg-[var(--color-accent-1)]" 
+        aria-hidden="true" 
+      />
+
+      <div className="mx-auto max-w-[var(--page-max-width)] px-[20px] lg:px-[40px] relative z-20">
+        
+        {/* =========================================
+            MASSIVE TYPOGRAPHIC ANCHOR
+           ========================================= */}
+        <div className="w-full border-b border-[var(--color-charcoal-ink)] pb-[40px] lg:pb-[60px] mb-[60px] lg:mb-[80px]">
+          <FadeUp>
+            <h2 className="text-[clamp(3.5rem,14vw,200px)] font-normal leading-[0.85] tracking-tight lg:tracking-[var(--tracking-display)] uppercase m-0 flex flex-col sm:flex-row sm:items-end justify-between">
+              <span className="block">DIVINE</span>
+              <span className="block">SPACE</span>
             </h2>
-            <p className="max-w-sm text-[16px] leading-[1.4] tracking-[0.08px] text-black">
-              At Divine Space Designers, we create interiors that reflect your personality while staying within your budget. Trusted by clients across Pune.
-            </p>
-            <div className="mt-2 flex items-center gap-6">
-              <a href="#" className="text-black transition-colors hover:text-[#ff0000]" aria-label="Instagram">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-black transition-colors hover:text-[#ff0000]" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-black transition-colors hover:text-[#ff0000]" aria-label="YouTube">
-                <Youtube size={20} />
-              </a>
-            </div>
-          </div>
+          </FadeUp>
+        </div>
 
-          <div>
-            <h3 className="mb-6 text-[14px] font-normal uppercase tracking-[0.21px] text-[#bfbfbf]">Quick Links</h3>
-            <ul className="flex flex-col gap-4">
-              {['Home', 'About Us', 'Projects', 'Process', 'Testimonials'].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase().replace(' ', '-')}`}
-                    className="text-[16px] font-normal text-black transition-colors hover:text-[#ff0000]"
+        {/* =========================================
+            ASYMMETRICAL EDITORIAL GRID
+           ========================================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-[60px] lg:gap-[40px]">
+          
+          {/* Column 1: Brand Manifesto & Social Pills */}
+          <div className="lg:col-span-4 flex flex-col justify-between">
+            <FadeUp delay={0.1}>
+              <p className="text-[var(--text-body)] font-normal leading-[var(--leading-body)] tracking-[var(--tracking-body)] max-w-[320px] mb-[40px]">
+                At Divine Space Designers, we create interiors that reflect your personality while staying within your budget. Trusted by clients across Pune.
+              </p>
+              
+              {/* System-Compliant Pill Ghost Buttons */}
+              <div className="flex flex-wrap gap-[12px]">
+                {['Instagram', 'Facebook', 'YouTube'].map((social) => (
+                  <a 
+                    key={social}
+                    href="#" 
+                    className="inline-flex items-center gap-[6px] rounded-[var(--radius-full)] border border-[var(--color-charcoal-ink)] px-[16px] py-[8px] text-[14px] font-normal transition-colors duration-300 hover:bg-[var(--color-charcoal-ink)] hover:text-[var(--color-paper-white)]"
                   >
-                    {link}
+                    {social}
+                    <ArrowUpRight className="w-[14px] h-[14px]" strokeWidth={1.5} />
                   </a>
-                </li>
-              ))}
-            </ul>
+                ))}
+              </div>
+            </FadeUp>
           </div>
 
-          <div>
-            <h3 className="mb-6 text-[14px] font-normal uppercase tracking-[0.21px] text-[#bfbfbf]">Services</h3>
-            <ul className="flex flex-col gap-4">
-              {[
-                'Residential Interiors',
-                'Modular Kitchens',
-                'Bedroom Design',
-                'Office Workspaces',
-                '3D Visualization',
-                'Custom Decor',
-              ].map((service) => (
-                <li key={service}>
-                  <a href="#services" className="text-[16px] font-normal text-black transition-colors hover:text-[#ff0000]">
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Column 2: Dense Brutalist Links */}
+          <div className="lg:col-span-2 lg:col-start-6">
+            <FadeUp delay={0.2}>
+              <h3 className="mb-[24px] text-[var(--text-caption)] font-semibold uppercase tracking-[var(--tracking-caption)] text-[var(--color-signal-red)]">
+                Quick Links
+              </h3>
+              <ul className="flex flex-col border-t border-[var(--color-charcoal-ink)]">
+                {['Home', 'About Us', 'Projects', 'Process', 'Testimonials'].map((link) => (
+                  <li key={link} className="border-b border-[var(--color-charcoal-ink)]">
+                    <a
+                      href={`#${link.toLowerCase().replace(' ', '-')}`}
+                      className="group block py-[16px] text-[var(--text-body-sm)] font-normal transition-colors hover:text-[var(--color-signal-red)] flex items-center justify-between"
+                    >
+                      <span className="transition-transform duration-300 group-hover:translate-x-2">{link}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </FadeUp>
           </div>
 
-          <div>
-            <h3 className="mb-6 text-[14px] font-normal uppercase tracking-[0.21px] text-[#bfbfbf]">Contact Us</h3>
-            <ul className="flex flex-col gap-5">
-              <li className="flex items-start gap-4 text-[16px] text-black">
-                <a href="tel:+919876543210" className="transition-colors hover:text-[#ff0000]">
-                  +91 98765 43210
-                </a>
-              </li>
-              <li className="flex items-start gap-4 text-[16px] text-black">
-                <a href="mailto:hello@divinespace.in" className="transition-colors hover:text-[#ff0000]">
-                  hello@divinespace.in
-                </a>
-              </li>
-              <li className="flex items-start gap-4 text-[16px] text-black">
-                <span>
-                  Kalyani Nagar, Pune,
-                  <br />
-                  Maharashtra 411014
-                </span>
-              </li>
-              <li className="flex items-start gap-4 text-[16px] text-black">
-                <a href="tel:+918459330334" className="transition-colors hover:text-[#ff0000]">
-                  +91 84593 30334
-                </a>
-              </li>
-              <li className="flex items-start gap-4 text-[16px] text-black">
-                <span>
-                  Nanded Gaon, Near Nanded City,
-                  <br />
-                  Sinhagad Road, Pune
-                </span>
-              </li>
-            </ul>
+          {/* Column 3: Dense Brutalist Services */}
+          <div className="lg:col-span-2">
+            <FadeUp delay={0.3}>
+              <h3 className="mb-[24px] text-[var(--text-caption)] font-semibold uppercase tracking-[var(--tracking-caption)] text-[var(--color-signal-red)]">
+                Services
+              </h3>
+              <ul className="flex flex-col border-t border-[var(--color-charcoal-ink)]">
+                {[
+                  'Residential Interiors',
+                  'Modular Kitchens',
+                  'Bedroom Design',
+                  'Office Workspaces',
+                  '3D Visualization',
+                  'Custom Decor',
+                ].map((service) => (
+                  <li key={service} className="border-b border-[var(--color-charcoal-ink)]">
+                    <a 
+                      href="#services" 
+                      className="group block py-[16px] text-[var(--text-body-sm)] font-normal transition-colors hover:text-[var(--color-signal-red)] flex items-center justify-between"
+                    >
+                      <span className="transition-transform duration-300 group-hover:translate-x-2">{service}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </FadeUp>
           </div>
+
+          {/* Column 4: Contact Directory */}
+          <div className="lg:col-span-3 lg:col-start-10">
+            <FadeUp delay={0.4}>
+              <h3 className="mb-[24px] text-[var(--text-caption)] font-semibold uppercase tracking-[var(--tracking-caption)] text-[var(--color-signal-red)]">
+                Contact Us
+              </h3>
+              <div className="flex flex-col border-t border-[var(--color-charcoal-ink)]">
+                
+                <div className="border-b border-[var(--color-charcoal-ink)] py-[16px] flex flex-col gap-[8px]">
+                  <span className="text-[12px] uppercase tracking-[0.2em] text-[var(--color-pewter)]">Email</span>
+                  <a href="mailto:hello@divinespace.in" className="text-[var(--text-body-sm)] font-semibold hover:text-[var(--color-signal-red)] transition-colors">
+                    hello@divinespace.in
+                  </a>
+                </div>
+
+                <div className="border-b border-[var(--color-charcoal-ink)] py-[16px] flex flex-col gap-[8px]">
+                  <span className="text-[12px] uppercase tracking-[0.2em] text-[var(--color-pewter)]">Phone</span>
+                  <a href="tel:+919876543210" className="text-[var(--text-body-sm)] font-semibold hover:text-[var(--color-signal-red)] transition-colors">
+                    +91 98765 43210
+                  </a>
+                  <a href="tel:+918459330334" className="text-[var(--text-body-sm)] font-semibold hover:text-[var(--color-signal-red)] transition-colors">
+                    +91 84593 30334
+                  </a>
+                </div>
+
+                <div className="border-b border-[var(--color-charcoal-ink)] py-[16px] flex flex-col gap-[8px]">
+                  <span className="text-[12px] uppercase tracking-[0.2em] text-[var(--color-pewter)]">Studios</span>
+                  <p className="text-[var(--text-body-sm)] font-normal leading-[1.4]">
+                    Kalyani Nagar, Pune,<br />Maharashtra 411014
+                  </p>
+                  <p className="text-[var(--text-body-sm)] font-normal leading-[1.4] mt-[8px]">
+                    Nanded Gaon, Near Nanded City,<br />Sinhagad Road, Pune
+                  </p>
+                </div>
+
+              </div>
+            </FadeUp>
+          </div>
+
         </div>
 
-        <div className="mt-20 mb-8 h-px w-full bg-black" />
+        {/* =========================================
+            BOTTOM METADATA
+           ========================================= */}
+        <FadeUp delay={0.5}>
+          <div className="mt-[80px] lg:mt-[120px] flex flex-col sm:flex-row items-center justify-between gap-[16px] border-t border-[var(--color-charcoal-ink)] pt-[20px] text-[var(--text-caption)] font-normal tracking-[var(--tracking-caption)]">
+            <p>&copy; {new Date().getFullYear()} Divine Space Designers.</p>
+            <p className="opacity-70">Designed in Pune</p>
+          </div>
+        </FadeUp>
 
-        <div className="flex flex-col items-center justify-between gap-4 text-[14px] font-normal tracking-[0.21px] text-black md:flex-row">
-          <p>&copy; 2025 Divine Space Designers.</p>
-          <p>Designed in Pune</p>
-        </div>
       </div>
     </footer>
   );

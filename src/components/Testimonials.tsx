@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -6,6 +7,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { FadeUp } from './FadeUp';
+import { AnimatedText } from './AnimatedText';
 
 const testimonials = [
   {
@@ -37,46 +39,78 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="w-full overflow-hidden bg-accent-6 px-6 py-24 lg:px-12 lg:py-32">
-      <div className="container relative mx-auto max-w-[1200px]">
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-2 bg-accent-7" aria-hidden="true" />
-        <div className="pl-6 md:pl-10">
-          <FadeUp>
-            <div className="mb-16 text-left">
-              <h2 className="text-[46px] font-normal leading-[1] tracking-[-1.38px] text-black md:text-[50px]">
-                Client Testimonials
+    <section 
+      id="testimonials" 
+      className="relative w-full overflow-hidden bg-[var(--color-accent-6)] px-[20px] py-[100px] lg:px-[40px] lg:py-[150px] font-[family-name:var(--font-helveticanow)]"
+    >
+      {/* Brand Primary Red Rail - Strict System Requirement */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[8px] bg-[var(--color-accent-7)]" aria-hidden="true" />
+      
+      <div className="mx-auto max-w-[var(--page-max-width)] relative z-20">
+        
+        {/* =========================================
+            TYPOGRAPHIC INSTALLATION HEADER
+           ========================================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-[20px] mb-[60px] lg:mb-[100px] items-end">
+          <div className="lg:col-span-8">
+            <FadeUp>
+              <h2 className="text-[clamp(3rem,11vw,120px)] font-normal leading-[0.93] tracking-tight lg:tracking-[var(--tracking-display)] text-[var(--color-charcoal-ink)] uppercase m-0 flex flex-col">
+                <span className="block">CLIENT</span>
+                <span className="block">TESTIMONIALS</span>
               </h2>
-            </div>
-          </FadeUp>
-
-          <FadeUp delay={0.2}>
-            <div className="relative w-full px-0">
-              <Carousel opts={{ loop: true }}>
-                <CarouselContent>
-                  {testimonials.map((test, index) => (
-                    <CarouselItem key={index} className="pl-5 md:basis-1/2 lg:basis-1/3">
-                      <div className="flex h-full flex-col justify-between border border-black bg-[#e8e8e8] p-8 rounded-none">
-                        <blockquote className="text-[18px] font-normal leading-[1.31] tracking-[-0.07px] text-black">
-                          "{test.quote}"
-                        </blockquote>
-                        <div className="mt-8 flex flex-col items-start border-t border-black pt-6">
-                          <p className="text-[16px] font-semibold text-black">{test.name}</p>
-                          <p className="mt-1 text-[14px] uppercase tracking-[0.21px] text-[#ff0000]">
-                            {test.project}
-                          </p>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <div className="mt-8 flex gap-2">
-                  <CarouselPrevious className="static translate-y-0 h-12 w-12 rounded-full border border-black bg-white text-black shadow-none transition-colors hover:bg-black hover:text-white" />
-                  <CarouselNext className="static translate-y-0 h-12 w-12 rounded-full border border-black bg-white text-black shadow-none transition-colors hover:bg-black hover:text-white" />
-                </div>
-              </Carousel>
-            </div>
-          </FadeUp>
+            </FadeUp>
+          </div>
+          <div className="lg:col-span-4 flex lg:justify-end pb-[10px] lg:pb-[20px]">
+            <FadeUp delay={0.2}>
+              <p className="text-[var(--text-body)] font-normal leading-[var(--leading-body)] tracking-[var(--tracking-body)] text-[var(--color-charcoal-ink)] max-w-[300px]">
+                <AnimatedText text="Don't just take our word for it. Hear from the people who live and work in our spaces." />
+              </p>
+            </FadeUp>
+          </div>
         </div>
+
+        {/* =========================================
+            BRUTALIST CAROUSEL CARDS
+           ========================================= */}
+        <FadeUp delay={0.3}>
+          <div className="relative w-full">
+            <Carousel opts={{ loop: true, align: "start" }} className="w-full">
+              <CarouselContent className="-ml-[20px]">
+                {testimonials.map((test, index) => (
+                  <CarouselItem key={index} className="pl-[20px] md:basis-1/2 xl:basis-1/3">
+                    
+                    {/* Flat Editorial Card */}
+                    <div className="flex h-full min-h-[350px] flex-col justify-between border border-[var(--color-charcoal-ink)] bg-[var(--color-paper-white)] p-[30px] lg:p-[40px] transition-transform duration-500 hover:-translate-y-2 cursor-grab active:cursor-grabbing">
+                      
+                      <blockquote className="text-[var(--text-subheading)] font-normal leading-[var(--leading-subheading)] tracking-[var(--tracking-subheading)] text-[var(--color-charcoal-ink)]">
+                        "{test.quote}"
+                      </blockquote>
+                      
+                      <div className="mt-[40px] flex flex-col items-start border-t border-[var(--color-pewter)] pt-[20px]">
+                        <p className="text-[var(--text-lg-3)] font-semibold text-[var(--color-charcoal-ink)]">
+                          {test.name}
+                        </p>
+                        {/* Strict Editorial Category Label */}
+                        <p className="mt-[8px] text-[var(--text-caption)] font-normal uppercase tracking-[var(--tracking-caption)] text-[var(--color-signal-red)]">
+                          {test.project}
+                        </p>
+                      </div>
+
+                    </div>
+
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              
+              {/* Custom Minimalist Controls */}
+              <div className="mt-[40px] lg:mt-[60px] flex justify-end gap-[12px] border-t border-[var(--color-charcoal-ink)] pt-[20px]">
+                <CarouselPrevious className="static translate-y-0 h-[50px] w-[50px] rounded-[var(--radius-full)] border border-[var(--color-charcoal-ink)] bg-transparent text-[var(--color-charcoal-ink)] shadow-none transition-colors duration-300 hover:bg-[var(--color-charcoal-ink)] hover:text-[var(--color-paper-white)]" />
+                <CarouselNext className="static translate-y-0 h-[50px] w-[50px] rounded-[var(--radius-full)] border border-[var(--color-charcoal-ink)] bg-transparent text-[var(--color-charcoal-ink)] shadow-none transition-colors duration-300 hover:bg-[var(--color-charcoal-ink)] hover:text-[var(--color-paper-white)]" />
+              </div>
+            </Carousel>
+          </div>
+        </FadeUp>
+
       </div>
     </section>
   );

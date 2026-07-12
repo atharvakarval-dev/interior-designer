@@ -31,6 +31,8 @@ The base system was historically restricted to a single red accent. Per client d
 
 Beyond the warm action palette, the site also carries the three Eindhoven brand primaries — sampled from the reference site's flat left panels. These are used as full-bleed section backgrounds and as the signature **left-panel** detail (a vertical color rail beside section content). Each is chosen so its text stays AA-contrast: pink is light (black text), red and blue are deep enough for white text.
 
+**Site-wide color rhythm (mobile-first):** every section carries a left-panel rail (`w-2`, `absolute inset-y-0 left-0`, decorative, no text on it) in a coordinating brand/warm color, and sections alternate between neutral white/gray and palette bands so color flows down the entire page rather than clustering at the end. Sequence: Hero (white · blue rail) → Marquee (white · red/blue/orange slashes) → WhyChooseUs (sand · red rail) → Services (white · terracotta rail) → Process (terracotta · blue rail) → Projects (blue · pink rail) → Testimonials (pink · red rail) → CTA (red · blue rail) → Footer (clay · terracotta rail).
+
 | Name | Value | Token | Role |
 |------|-------|-------|------|
 | Blush Pink | `#DCA8CB` | `--color-accent-6` | Brand primary — light editorial band / left-panel background; carries black text at AA. |

@@ -1,52 +1,60 @@
+import React from 'react';
 import { FadeUp } from './FadeUp';
 
 export function Marquee() {
   return (
-    <div className="w-full overflow-hidden bg-white py-12 md:py-20 border-t border-b border-black">
-      <FadeUp>
-        <div className="flex whitespace-nowrap group">
-          <div className="animate-marquee inline-block group-hover:[animation-play-state:paused]">
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-black mx-4">
+    <section className="relative w-full overflow-hidden bg-[var(--color-paper-white)] py-[20px] lg:py-[30px] border-y border-[var(--color-charcoal-ink)] flex items-center font-[family-name:var(--font-helveticanow)] z-10">
+      
+      <FadeUp className="w-full">
+        {/* Infinite Marquee Container with Accessible Hover Pause */}
+        <div className="flex w-max flex-nowrap whitespace-nowrap group">
+          
+          {/* Track 1 */}
+          <div className="flex items-center animate-marquee group-hover:[animation-play-state:paused]">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none tracking-[var(--tracking-heading-lg)] uppercase text-[var(--color-charcoal-ink)] mx-[20px] lg:mx-[40px]">
               EDITORIAL DESIGN
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-[#ff0000] mx-4 inline-block">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none uppercase text-[var(--color-accent-7)] mx-[20px] lg:mx-[40px] inline-block -translate-y-[2%]">
               /
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-black mx-4">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none tracking-[var(--tracking-heading-lg)] uppercase text-[var(--color-charcoal-ink)] mx-[20px] lg:mx-[40px]">
               BRUTALIST ARCHITECTURE
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-[#ff0000] mx-4 inline-block">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none uppercase text-[var(--color-accent-8)] mx-[20px] lg:mx-[40px] inline-block -translate-y-[2%]">
               /
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-black mx-4">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none tracking-[var(--tracking-heading-lg)] uppercase text-[var(--color-charcoal-ink)] mx-[20px] lg:mx-[40px]">
               MINIMAL SPACES
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-[#ff0000] mx-4 inline-block">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none uppercase text-[var(--color-accent-3)] mx-[20px] lg:mx-[40px] inline-block -translate-y-[2%]">
               /
             </span>
           </div>
-          <div className="animate-marquee inline-block group-hover:[animation-play-state:paused]" aria-hidden="true">
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-black mx-4">
+
+          {/* Track 2 - Duplicated for infinite seamless loop (Hidden from screen readers) */}
+          <div className="flex items-center animate-marquee group-hover:[animation-play-state:paused]" aria-hidden="true">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none tracking-[var(--tracking-heading-lg)] uppercase text-[var(--color-charcoal-ink)] mx-[20px] lg:mx-[40px]">
               EDITORIAL DESIGN
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-[#ff0000] mx-4 inline-block">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none uppercase text-[var(--color-accent-7)] mx-[20px] lg:mx-[40px] inline-block -translate-y-[2%]">
               /
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-black mx-4">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none tracking-[var(--tracking-heading-lg)] uppercase text-[var(--color-charcoal-ink)] mx-[20px] lg:mx-[40px]">
               BRUTALIST ARCHITECTURE
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-[#ff0000] mx-4 inline-block">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none uppercase text-[var(--color-accent-8)] mx-[20px] lg:mx-[40px] inline-block -translate-y-[2%]">
               /
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-black mx-4">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none tracking-[var(--tracking-heading-lg)] uppercase text-[var(--color-charcoal-ink)] mx-[20px] lg:mx-[40px]">
               MINIMAL SPACES
             </span>
-            <span className="text-[50px] md:text-[80px] font-normal tracking-[-0.03em] uppercase text-[#ff0000] mx-4 inline-block">
+            <span className="text-[clamp(1.5rem,4vw,60px)] font-normal leading-none uppercase text-[var(--color-accent-3)] mx-[20px] lg:mx-[40px] inline-block -translate-y-[2%]">
               /
             </span>
           </div>
+
         </div>
       </FadeUp>
-    </div>
+    </section>
   );
 }
