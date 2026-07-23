@@ -122,8 +122,8 @@ export function Footer() {
 
                 <div className="border-b border-[var(--color-charcoal-ink)] py-[16px] flex flex-col gap-[8px]">
                   <span className="text-[12px] uppercase tracking-[0.2em] opacity-70">Phone</span>
-                  <a href="tel:+919876543210" className="text-[var(--text-body-sm)] font-semibold hover:text-[var(--color-signal-red)] transition-colors">
-                    +91 98765 43210
+                  <a href="https://wa.me/919970575328" target="_blank" rel="noopener noreferrer" className="text-[var(--text-body-sm)] font-semibold hover:text-[var(--color-signal-red)] transition-colors">
+                    +91 99705 75328
                   </a>
                   <a href="tel:+918459330334" className="text-[var(--text-body-sm)] font-semibold hover:text-[var(--color-signal-red)] transition-colors">
                     +91 84593 30334

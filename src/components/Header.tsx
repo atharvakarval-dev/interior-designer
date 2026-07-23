@@ -84,8 +84,8 @@ export function Header() {
                 <a href="mailto:hello@divinespace.com" className="text-[16px] font-semibold text-[var(--color-charcoal-ink)] transition-colors hover:text-[var(--color-signal-red)]">
                   hello@divinespace.com
                 </a>
-                <a href="tel:+919876543210" className="text-[16px] font-semibold text-[var(--color-charcoal-ink)] transition-colors hover:text-[var(--color-signal-red)]">
-                  +91 98765 43210
+                <a href="https://wa.me/919970575328" target="_blank" rel="noopener noreferrer" className="text-[16px] font-semibold text-[var(--color-charcoal-ink)] transition-colors hover:text-[var(--color-signal-red)]">
+                  +91 99705 75328
                 </a>
               </div>
               
