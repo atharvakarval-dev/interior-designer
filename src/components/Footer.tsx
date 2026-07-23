@@ -114,14 +114,14 @@ export function Footer() {
               <div className="flex flex-col border-t border-[var(--color-charcoal-ink)]">
                 
                 <div className="border-b border-[var(--color-charcoal-ink)] py-[16px] flex flex-col gap-[8px]">
-                  <span className="text-[12px] uppercase tracking-[0.2em] text-[var(--color-pewter)]">Email</span>
+                  <span className="text-[12px] uppercase tracking-[0.2em] opacity-70">Email</span>
                   <a href="mailto:hello@divinespace.in" className="text-[var(--text-body-sm)] font-semibold hover:text-[var(--color-signal-red)] transition-colors">
                     hello@divinespace.in
                   </a>
                 </div>
 
                 <div className="border-b border-[var(--color-charcoal-ink)] py-[16px] flex flex-col gap-[8px]">
-                  <span className="text-[12px] uppercase tracking-[0.2em] text-[var(--color-pewter)]">Phone</span>
+                  <span className="text-[12px] uppercase tracking-[0.2em] opacity-70">Phone</span>
                   <a href="tel:+919876543210" className="text-[var(--text-body-sm)] font-semibold hover:text-[var(--color-signal-red)] transition-colors">
                     +91 98765 43210
                   </a>
@@ -131,12 +131,12 @@ export function Footer() {
                 </div>
 
                 <div className="border-b border-[var(--color-charcoal-ink)] py-[16px] flex flex-col gap-[8px]">
-                  <span className="text-[12px] uppercase tracking-[0.2em] text-[var(--color-pewter)]">Studios</span>
+                  <span className="text-[12px] uppercase tracking-[0.2em] opacity-70">Studio</span>
                   <p className="text-[var(--text-body-sm)] font-normal leading-[1.4]">
-                    Kalyani Nagar, Pune,<br />Maharashtra 411014
-                  </p>
-                  <p className="text-[var(--text-body-sm)] font-normal leading-[1.4] mt-[8px]">
-                    Nanded Gaon, Near Nanded City,<br />Sinhagad Road, Pune
+                    Aarambh Heights<br />
+                    Shop No. 18, Ground Floor<br />
+                    Nanded Gaon<br />
+                    Sinhagad Road, Pune
                   </p>
                 </div>
 
