@@ -178,7 +178,7 @@ export function Services() {
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full aspect-[4/3] object-cover bg-[var(--color-newsprint-gray)] grayscale"
+                    className="w-full aspect-[4/3] object-cover bg-[var(--color-newsprint-gray)]"
                   />
                 </div>
               </div>

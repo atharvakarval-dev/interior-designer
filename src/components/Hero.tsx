@@ -2,6 +2,8 @@ import React from 'react';
 import { FadeUp } from './FadeUp';
 import { AnimatedText } from './AnimatedText';
 import heroImage from '../../assets/design_konzept_studio_design_konzept_1.webp';
+import livingRoomImage from '../../assets/house design.webp';
+import bedroomImage from '../../assets/7.webp';
 
 export function Hero() {
   return (
@@ -94,14 +96,14 @@ export function Hero() {
               <div className="grid grid-cols-2 gap-[20px]">
                 <FadeUp delay={0.6}>
                   <img
-                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&q=80"
+                    src={livingRoomImage}
                     alt="Interior living room"
                     className="w-full aspect-[3/4] object-cover bg-[var(--color-newsprint-gray)]"
                   />
                 </FadeUp>
                 <FadeUp delay={0.7}>
                   <img
-                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000&q=80"
+                    src={bedroomImage}
                     alt="Warm living room detail"
                     className="w-full aspect-[4/5] object-cover bg-[var(--color-newsprint-gray)] mt-[40px]"
                   />
@@ -124,7 +126,7 @@ export function Hero() {
               {/* Image 2: Middle Right Living Room (Dominant) */}
               <FadeUp delay={0.5} className="absolute top-[15%] right-[0%] w-[65%] z-20 transition-transform duration-[2s] hover:scale-[1.02]">
                 <img
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&q=80"
+                  src={livingRoomImage}
                   alt="Interior living room"
                   className="w-full aspect-[16/9] object-cover bg-[var(--color-newsprint-gray)] grayscale contrast-125"
                 />
@@ -134,7 +136,7 @@ export function Hero() {
               <FadeUp delay={0.6} className="absolute bottom-[0%] left-[12%] w-[42%] z-30 transition-transform duration-[2s] hover:scale-[1.02]">
                 <div className="relative w-full">
                   <img
-                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000&q=80"
+                    src={bedroomImage}
                     alt="Bedroom detail"
                     className="w-full aspect-[3/4] object-cover bg-[var(--color-newsprint-gray)]"
                   />
