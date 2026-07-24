@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { FadeUp } from './FadeUp';
 import { AnimatedText } from './AnimatedText';
 import { ArrowRight, Home, LayoutDashboard, Sofa, Briefcase, Grid, PaintBucket } from 'lucide-react';
-import residentialImage from '../../assets/Grand parents room.webp';
-import furnitureImage from '../../assets/bedroom.webp';
+import residentialImage from '../../assets/TCS delhi0149.webp';
+import furnitureImage from '../../assets/Apartment at Niwa Kessaku Phoenix (14).webp';
 import commercialImage from '../../assets/commercial-interior-design-services.jpg';
 import designPlanningImage from '../../assets/ss2471258001-architect.jpg';
+import modularKitchenImage from '../../assets/Equinox_Studio Nilasha(10).webp';
+import livingBedroomImage from '../../assets/Grand parents room.webp';
 
 const services = [
   {
@@ -18,13 +20,13 @@ const services = [
     title: 'Modular Kitchen',
     description: 'Smart, aesthetic, and functional kitchen designs for the modern lifestyle.',
     icon: LayoutDashboard,
-    image: '/assets/modular-kitchen.webp',
+    image: modularKitchenImage,
   },
   {
     title: 'Living & Bedroom',
     description: 'Cozy and luxurious setups designed to enhance comfort and relaxation.',
     icon: Sofa,
-    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1000&q=80',
+    image: livingBedroomImage,
   },
   {
     title: 'Office & Commercial',
