@@ -1,6 +1,7 @@
 import React from 'react';
 import { FadeUp } from './FadeUp';
 import { AnimatedText } from './AnimatedText';
+import heroImage from '../../assets/design_konzept_studio_design_konzept_1.webp';
 
 export function Hero() {
   return (
@@ -85,7 +86,7 @@ export function Hero() {
             <div className="flex lg:hidden flex-col gap-[20px] w-full">
               <FadeUp delay={0.5}>
                 <img
-                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80"
+                  src={heroImage}
                   alt="Minimal office interior"
                   className="w-full aspect-[4/3] object-cover bg-[var(--color-newsprint-gray)]"
                 />
@@ -114,7 +115,7 @@ export function Hero() {
               {/* Image 1: Top Left Building */}
               <FadeUp delay={0.4} className="absolute top-[0%] left-[0%] w-[48%] z-10 transition-transform duration-[2s] hover:scale-[1.02]">
                 <img
-                  src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80"
+                  src={heroImage}
                   alt="Architecture exterior"
                   className="w-full aspect-[4/5] object-cover bg-[var(--color-newsprint-gray)] grayscale contrast-125"
                 />
