@@ -5,6 +5,7 @@ import { ArrowRight, Home, LayoutDashboard, Sofa, Briefcase, Grid, PaintBucket }
 import residentialImage from '../../assets/Grand parents room.webp';
 import furnitureImage from '../../assets/bedroom.webp';
 import commercialImage from '../../assets/commercial-interior-design-services.jpg';
+import designPlanningImage from '../../assets/ss2471258001-architect.jpg';
 
 const services = [
   {
@@ -35,7 +36,7 @@ const services = [
     title: '3D Design & Planning',
     description: 'High-quality 3D visualizations and space planning to preview your dream space.',
     icon: Grid,
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1000&q=80',
+    image: designPlanningImage,
   },
   {
     title: 'Furniture & Decor',
