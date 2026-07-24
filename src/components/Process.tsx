@@ -1,6 +1,7 @@
 import React from 'react';
 import { FadeUp } from './FadeUp';
 import { AnimatedText } from './AnimatedText';
+import processImage from '../../assets/light-blue-wall-paint-interior-house.jpg';
 
 const steps = [
   {
@@ -73,7 +74,7 @@ export function Process() {
               <FadeUp delay={0.4}>
                 <div className="w-full aspect-[4/3] bg-[var(--color-newsprint-gray)] overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1400&q=80"
+                    src={processImage}
                     alt="Designers reviewing material samples on site"
                     className="w-full h-full object-cover transition-transform duration-[2s] ease-out hover:scale-105"
                   />

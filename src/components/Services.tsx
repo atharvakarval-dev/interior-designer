@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { FadeUp } from './FadeUp';
 import { AnimatedText } from './AnimatedText';
 import { ArrowRight, Home, LayoutDashboard, Sofa, Briefcase, Grid, PaintBucket } from 'lucide-react';
+import residentialImage from '../../assets/Grand parents room.webp';
 
 const services = [
   {
     title: 'Residential Interiors',
     description: 'Complete interior design solutions tailored for homes, apartments, and villas.',
     icon: Home,
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1000&q=80',
+    image: residentialImage,
   },
   {
     title: 'Modular Kitchen',
