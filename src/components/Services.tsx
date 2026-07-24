@@ -3,6 +3,8 @@ import { FadeUp } from './FadeUp';
 import { AnimatedText } from './AnimatedText';
 import { ArrowRight, Home, LayoutDashboard, Sofa, Briefcase, Grid, PaintBucket } from 'lucide-react';
 import residentialImage from '../../assets/Grand parents room.webp';
+import furnitureImage from '../../assets/bedroom.webp';
+import commercialImage from '../../assets/commercial-interior-design-services.jpg';
 
 const services = [
   {
@@ -27,7 +29,7 @@ const services = [
     title: 'Office & Commercial',
     description: 'Professional and productive workspaces designed for efficiency and branding.',
     icon: Briefcase,
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&q=80',
+    image: commercialImage,
   },
   {
     title: '3D Design & Planning',
@@ -39,7 +41,7 @@ const services = [
     title: 'Furniture & Decor',
     description: 'Custom furniture and carefully curated decor items that match your style.',
     icon: PaintBucket,
-    image: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=1000&q=80',
+    image: furnitureImage,
   }
 ];
 
